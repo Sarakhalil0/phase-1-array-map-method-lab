@@ -11,6 +11,23 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+
+function titleCased() {
+  const tutorial = tutorials.map(upperT => {
+
+    const upperCaes = upperT.split(' ').map(upperW => {
+      return upperW.charAt(0).toUpperCase() + upperW.slice(1);
+
+    }).join(' ');
+    console.log(upperCaes);
+    return upperCaes
+  })
+  return tutorial;
 }
+// charAt() is a string method that is used to retrieve a character at a specific position in a string.
+ //Because the charAt() method is a method of the String object, it must be invoked through a particular
+ //instance of the String class.
+
+
+
+
